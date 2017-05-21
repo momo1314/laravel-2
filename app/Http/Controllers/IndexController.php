@@ -29,8 +29,7 @@ class IndexController extends Controller
                     for($k = 1; $k < 10; $k++) {
                         $data[] = $matches[1][$x + $k];
                     }
-                    $status = $sql->Insert($data);
-                    DB::table('class')->insert([
+                    $status = DB::table('class')->insert([
                         'id'            =>      $data[0],
                         'name'          =>      $data[1],
                         'sex'           =>      $data[2],
